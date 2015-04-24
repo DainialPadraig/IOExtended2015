@@ -1,4 +1,6 @@
-var toastGroupTemplate = document.querySelector('#toastGroup');
-toastGroupTemplate.showToast = function() {
-  document.querySelector('#toast').show();
-};
+// Listener to switch pages when tab selected.
+var tabs = document.querySelector('paper-tabs');
+
+tabs.addEventListener('core-select', function() {
+  console.log("Selected: " + tabs.selected);
+});
