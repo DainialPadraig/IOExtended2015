@@ -1,5 +1,5 @@
 
-body {
+html, body {
   height: 100%;
   margin: 0px;
   font-family: RobotoDraft, sans-serif;
@@ -36,25 +36,8 @@ core-toolbar {
   margin-bottom: 1.5em;
 }
 
-paper-button {
-  margin: 0.5em 1em 0.5em 0;
-  width: 10em;
-}
-
-paper-button[right] {
-  position: fixed;
-  right: 0;
-}
-
-paper-checkbox {
-  margin-left: 1em;
-}
-
-paper-fab {
-  position: absolute !important;
-  top: 35px;
-  right: 1em;
-  z-index: 1;
+core-pages {
+  height: 100%;
 }
 
 paper-tabs {

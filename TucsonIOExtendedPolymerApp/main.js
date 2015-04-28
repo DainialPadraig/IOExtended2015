@@ -1,9 +1,8 @@
-// Listener to switch pages when tab selected.
-var tabs = document.querySelector('paper-tabs');
-var pages = document.querySelector('core-pages');
+var template = document.querySelector('template[is="auto-binding"]');
 
-tabs.selected = 0;
-
-tabs.addEventListener('core-select', function() {
-  pages.selected = tabs.selected;
-});
+template.pages = [
+  {name: 'Wednesday, 27 May', hash: 'one'},
+  {name: 'Thursday, 28 May', hash: 'two'},
+  {name: 'Friday, 29 May', hash: 'three'},
+  {name: 'Saturday, 30 May', hash: 'four'}
+];

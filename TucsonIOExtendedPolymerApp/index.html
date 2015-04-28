@@ -22,31 +22,35 @@
   
 </head>
 
-<body unresolved>
+<body unresolved fullbleed>
   
+  <template is="auto-binding">
+    
   <core-header-panel>
     
     <core-toolbar class="medium-tall">
       <paper-icon-button icon="menu"></paper-icon-button>
       <span flex>Tucson I/O Extended 2015</span><br />
       <div class="bottom fit" horizontal layout>
-        <paper-tabs selected="{{selected}}" flex>
-          <paper-tab>Wednesday, 27 May</paper-tab>
-          <paper-tab>Thursday, 28 May</paper-tab>
-          <paper-tab>Friday, 29 May</paper-tab>
-          <paper-tab>Saturday, 30 May</paper-tab>
+        <paper-tabs valattr="hash" selected="{{route}}" flex>
+          <template repeat="{{page in pages}}">
+            <paper-tab hash="{{page.hash}}" noink>{{page.name}}</paper-tab>
+          </template>
         </paper-tabs>
       </div>
     </core-toolbar>
   
-    <core-pages>
-      <div>Wednesday, 27 May</div>
-      <div>Thursday, 28 May</div>
-      <div>Friday, 29 May</div>
-      <div>Saturday, 30 May</div>
+    <core-pages valueattr="hash" selected="{{route}}">
+      <template repeat="{{page in pages}}">
+        <section hash="{{page.hash}}" layout vertical center-center>
+          <div>{{page.name}}</div>
+        </section>
+      </template>
     </core-pages>
   
   </core-header-panel>
+  
+  </template>
   
   <script src="main.js"></script>
   
